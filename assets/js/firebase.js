@@ -94,13 +94,51 @@ const $name = document.querySelector('.profile_name > h1');
 const $word = document.querySelector('.profile_short > h1');
 const $blog = document.querySelector('.blog_image > a');
 const $git = document.querySelector('.github_image > a');
-console.log($blog);
+const $profileImg = document.querySelector('.profile_photo > img');
+const $mbtiImg = document.querySelector('.mbtiImg > img');
+const $teamPlayImg = document.querySelector('.teamPlayImg> img');
+const $strengthImg = document.querySelector('.strengthImg> img');
+const $hobbyImg = document.querySelector('.hobbyImg> img');
+const $title = document.querySelector('.explain_body > .title');
+const $comment = document.querySelector('.explain_body > .comment');
+console.log($title);
+
+const globalObj = {};
 
 async function getMemberData(id) {
     const personalDoc = await getDoc(doc(db, 'members', id));
     // console.log(memberDocRef.data());
-    const { color, git, hobby, mbti, name, strength, teamPlay, word } =
-        personalDoc.data();
+    const { blog, color, git, hobby, mbti, name, profileImg, strength, teamPlay, word } =
+        personalDoc.data(); //
+
+    // 전역객체에 넣음 (이럼안되는데 ㅠ)
+    globalObj.mbti = mbti;
+    globalObj.hobby = hobby;
+    globalObj.strength = strength;
+    globalObj.teamPlay = teamPlay;
+
     $name.textContent = name;
     $word.textContent = word;
+    $blog.href = blog;
+    $git.href = git;
+    $profileImg.src = profileImg;
+    $mbtiImg.src = mbti.mbtiImg;
+    $teamPlayImg.src = teamPlay.teamPlayImg;
+    $strengthImg.src = strength.strengthImg;
+    $hobbyImg.src = hobby.hobbyImg;
 }
+
+console.log(globalObj);
+
+function changePersonalInfo(target) {
+    const { title, comment } = globalObj[target];
+    $title.textContent = title;
+    $comment.textContent = comment;
+
+    console.log(title, comment);
+}
+
+$mbtiImg.addEventListener('click', () => changePersonalInfo('mbti'));
+$teamPlayImg.addEventListener('click', () => changePersonalInfo('teamPlay'));
+$strengthImg.addEventListener('click', () => changePersonalInfo('strength'));
+$hobbyImg.addEventListener('click', () => changePersonalInfo('hobby'));
