@@ -2,6 +2,19 @@
 <html lang="en">
 
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>White Canvas | 방지영</title>
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet" />
+
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -11,156 +24,41 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/style.css ">
+  <link href="assets/css/style_personal.css" rel="stylesheet" />
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>White Canvas | 방지영</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet" />
-  <style>
-    * {
-      font-family: "Nanum Gothic Coding", monospace;
-    }
+  <script type="module" src="./assets/js/firebase.js"></script>
 
-    .personal_page .top {
-      width: 1000px;
-      background-color: green;
-      display: flex;
-
-      justify-content: center;
-      align-items: flex-start;
-      margin: 200px auto 100px auto;
-    }
-
-    .personal_page .profile_photo {
-      width: 400px;
-      height: 400px;
-
-      background-color: red;
-      background-image: url();
-      background-size: cover;
-      border-radius: 5px;
-    }
-
-    .personal_page .photo_image {
-      width: 400px;
-      height: 400px;
-    }
-
-    .personal_page .profile_right {
-      width: 400px;
-      height: 400px;
-      background-color: darkblue;
-      text-align: center;
-    }
-
-    .personal_page .profile_name {
-      text-align: start;
-    }
-
-    .personal_page .profile_short {
-      text-align: start;
-    }
-
-    .personal_page .profle_address {
-      display: flex;
-      flex-direction: row;
-    }
-
-    .personal_page .vlog_image {
-      width: 45px;
-      height: 45px;
-
-      border-radius: 5px;
-    }
-
-    .personal_page .github_image {
-      width: 45px;
-      height: 45px;
-
-      border-radius: 5px;
-    }
-
-    .personal_page .middle {
-      display: grid;
-      grid-template-columns: 40% 60%;
-      background-color: skyblue;
-      width: 1000px;
-      border-radius: 5px;
-      overflow: hidden;
-      margin: 100px auto 100px auto;
-    }
-
-    .personal_page .middle_image {
-      width: 700px;
-      background-color: pink;
-    }
-
-    .personal_page .image_wrap {
-      width: 260px;
-      height: 260px;
-      margin: 20px 10px 10px 20px;
-      padding-top: 0px;
-      border-radius: 5px;
-      position: relative;
-
-      float: inline-start;
-    }
-
-    .personal_page .image_wrap img {
-      width: 260px;
-      height: 260px;
-      vertical-align: middle;
-      background-color: cadetblue;
-      border-radius: 5px;
-    }
-
-    .personal_page .image_text {
-      padding: 10px 10px;
-      border-radius: 10px;
-      font-weight: semi bold;
-      text-align: center;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      white-space: nowrap;
-    }
-
-    .personal_page .middle_explain {
-      margin-top: 35%;
-    }
-
-    .personal_page .explain_body {
-      text-align: center;
-    }
-  </style>
 </head>
 
-<body>
-  <header id="header" class="header fixed-top">
-    <div class="container container-xl d-flex align-items-center justify-content-center">
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo main.png" alt="" />
-      </a>
-    </div>
+<!-- body start -->
+<header id="header" class="header fixed-top">
+  <div class="container container-xl d-flex align-items-center justify-content-center">
+    <a href="index.html" class="logo d-flex align-items-center">
+      <img src="../assets/img/logo main.png" alt="" />
+    </a>
+  </div>
 
-    <!-- .navbar -->
-    <nav id="navbar" class="container container-xl align-items-center justify-content-center navbar">
-      <ul>
-        <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-        <li><a class="nav-link scrollto" href="#about">About</a></li>
-        <li><a class="nav-link scrollto" href="#services">Team</a></li>
-        <li><a class="nav-link scrollto" href="#Gbox">guest book</a></li>
-      </ul>
-      <i class="bi bi-list mobile-nav-toggle"></i>
-    </nav>
-    <!-- End navbar -->
-  </header>
+  <!-- .navbar -->
+  <nav id="navbar" class="container container-xl align-items-center justify-content-center navbar">
+    <ul>
+      <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+      <li><a class="nav-link scrollto" href="#about">About</a></li>
+      <li><a class="nav-link scrollto" href="#services">Team</a></li>
+      <li><a class="nav-link scrollto" href="#Gbox">guest book</a></li>
+    </ul>
+    <i class="bi bi-list mobile-nav-toggle"></i>
+  </nav>
+  <!-- End navbar -->
+</header>
+<!-- End Header -->
+
+<body class="personal_page">
   <div class="top">
-    <div class="profile_photo"></div>
+    <div class="profile_photo">
+      <img src="" alt="">
+    </div>
 
     <div class="profile_right">
       <div class="profile_name">
@@ -170,11 +68,15 @@
         <h1 style="font-size: 30px">본인 한마디 적기</h1>
       </div>
       <div class="profle_address">
-        <div class="vlog_image">
-          <img src="assets/img/WeChat_image.png" alt="" />
+        <div class="blog_image">
+          <a href="">
+            <img src="../assets/img/WeChat_image.png" alt="블로그" />
+          </a>
         </div>
         <div class="github_image">
-          <img src="assets/img/Github_image.png" alt="" />
+          <a href="">
+            <img src="../assets/img/Github_image.png" alt="깃허브" />
+          </a>
         </div>
       </div>
     </div>
@@ -183,38 +85,30 @@
   <div class="middle">
     <div class="middle_explain">
       <div class="explain_body">
-        <h1 style="font-size: 25px; font-weight: 1; text-align: center">
-          ipsum dolor sit amet consectetur adipisicing elit. Est non molestias
-          ab magnam quibusdam veritatis qui possimus, facere illum nesciunt
-          praesentium incidunt, placeat explicabo obcaecati quas nemo libero
-          omnis! Eligendi.
+        <h1 class="title">
+          title
         </h1>
+        <p class="comment">
+          comment
+        </p>
       </div>
     </div>
+
     <div class="middle_image">
       <div class="image_wrap">
-        <div class="image_text">
-          <h2 style="font-size: 36px">MBTI</h2>
-        </div>
-        <div class="image_image"><img src="" alt="" /></div>
+        <div class="mbtiImg"><img src="" alt="" /></div>
       </div>
       <div class="image_wrap">
-        <div class="image_text">
-          <h2 style="font-size: 36px">협업 스타일</h2>
-        </div>
-        <div class="image_image"><img src="" alt="" /></div>
+
+        <div class="teamPlayImg"><img src="" alt="" /></div>
       </div>
       <div class="image_wrap">
-        <div class="image_text">
-          <h2 style="font-size: 36px">특기</h2>
-        </div>
-        <div class="image_image"><img src="" alt="" /></div>
+
+        <div class="strengthImg"><img src="" alt="" /></div>
       </div>
       <div class="image_wrap">
-        <div class="image_text">
-          <h2 style="font-size: 36px">취미</h2>
-        </div>
-        <div class="image_image"><img src="" alt="" /></div>
+
+        <div class="hobbyImg"><img src="" alt="" /></div>
       </div>
     </div>
   </div>
@@ -238,6 +132,19 @@
       </div>
     </div>
   </footer>
+
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>

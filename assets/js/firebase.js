@@ -29,23 +29,19 @@ console.log(window.location.pathname);
 
 if (window.location.pathname === '/index.html') {
     getGuestBooks();
-} else if (window.location.pathname === '/personalPage_main.html') {
+} else if (window.location.pathname === '/personalPage_boyoung.html') {
+    getMemberData('LeeBoyoung');
+} else if (window.location.pathname === '/personalPage_hayan.html') {
     getMemberData('LeeHayan');
+} else if (window.location.pathname === '/personalPage_jihun.html') {
+    getMemberData('SonJihun');
+} else if (window.location.pathname === '/personalPage_jiyoung.html') {
+    getMemberData('BangJiYoung');
+} else if (window.location.pathname === '/personalPage_seyoung.html') {
+    getMemberData('LeeSeyoung');
+} else if (window.location.pathname === '/personalPage_yunju.html') {
+    getMemberData('KangYunju');
 }
-
-// else if (window.location.pathname === '/personalPage_boyoung.html') {
-//     getMemberData('LeeBoyoung');
-// } else if (window.location.pathname === '/personalPage_hayan.html') {
-//     getMemberData('LeeHayan');
-// } else if (window.location.pathname === '/personalPage_jihun.html') {
-//     getMemberData('SonJihun');
-// } else if (window.location.pathname === '/personalPage_jiyoung.html') {
-//     getMemberData('BangJiYoung');
-// } else if (window.location.pathname === '/personalPage_seyoung.html') {
-//     getMemberData('LeeSeyoung');
-// } else if (window.location.pathname === '/personalPage_yunju.html') {
-//     getMemberData('KangYunju');
-//}
 
 async function getGuestBooks() {
     console.log('게스트북');
@@ -126,6 +122,8 @@ async function getMemberData(id) {
     $teamPlayImg.src = teamPlay.teamPlayImg;
     $strengthImg.src = strength.strengthImg;
     $hobbyImg.src = hobby.hobbyImg;
+    $title.textContent = mbti.title;
+    $comment.textContent = mbti.comment;
 }
 
 console.log(globalObj);
