@@ -25,27 +25,21 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-console.log(window.location.pathname);
-
 if (window.location.pathname === '/index.html') {
     getGuestBooks();
-} else if (window.location.pathname === '/personalPage_main.html') {
+} else if (window.location.pathname === '/personalPage_boyoung.html') {
+    getMemberData('LeeBoyoung');
+} else if (window.location.pathname === '/personalPage_hayan.html') {
     getMemberData('LeeHayan');
+} else if (window.location.pathname === '/personalPage_jihun.html') {
+    getMemberData('SonJihun');
+} else if (window.location.pathname === '/personalPage_jiyoung.html') {
+    getMemberData('BangJiYoung');
+} else if (window.location.pathname === '/personalPage_seyoung.html') {
+    getMemberData('LeeSeyoung');
+} else if (window.location.pathname === '/personalPage_yunju.html') {
+    getMemberData('KangYunju');
 }
-
-// else if (window.location.pathname === '/personalPage_boyoung.html') {
-//     getMemberData('LeeBoyoung');
-// } else if (window.location.pathname === '/personalPage_hayan.html') {
-//     getMemberData('LeeHayan');
-// } else if (window.location.pathname === '/personalPage_jihun.html') {
-//     getMemberData('SonJihun');
-// } else if (window.location.pathname === '/personalPage_jiyoung.html') {
-//     getMemberData('BangJiYoung');
-// } else if (window.location.pathname === '/personalPage_seyoung.html') {
-//     getMemberData('LeeSeyoung');
-// } else if (window.location.pathname === '/personalPage_yunju.html') {
-//     getMemberData('KangYunju');
-//}
 
 async function getGuestBooks() {
     console.log('게스트북');
@@ -90,17 +84,62 @@ async function getGuestBooks() {
 
 // 멤버 정보 가져오기
 
+const $middle = document.querySelector('.middle');
 const $name = document.querySelector('.profile_name > h1');
 const $word = document.querySelector('.profile_short > h1');
 const $blog = document.querySelector('.blog_image > a');
 const $git = document.querySelector('.github_image > a');
-console.log($blog);
+const $profileImg = document.querySelector('.profile_photo > img');
+
+const $mbtiImg = document.querySelector('.mbtiImg  img');
+const $teamPlayImg = document.querySelector('.teamPlayImg  img');
+const $strengthImg = document.querySelector('.strengthImg  img');
+const $hobbyImg = document.querySelector('.hobbyImg  img');
+
+const $title = document.querySelector('.explain_body > .title');
+const $comment = document.querySelector('.explain_body > .comment');
+
+console.log($mbtiImg);
+
+const globalObj = {};
 
 async function getMemberData(id) {
     const personalDoc = await getDoc(doc(db, 'members', id));
     // console.log(memberDocRef.data());
-    const { color, git, hobby, mbti, name, strength, teamPlay, word } =
-        personalDoc.data();
+    const { blog, color, git, hobby, mbti, name, profileImg, strength, teamPlay, word } =
+        personalDoc.data(); //
+
+    globalObj.mbti = mbti;
+    globalObj.hobby = hobby;
+    globalObj.strength = strength;
+    globalObj.teamPlay = teamPlay;
+
+    $middle.style.backgroundColor = `${color}`;
     $name.textContent = name;
     $word.textContent = word;
+    $blog.href = blog;
+    $git.href = git;
+    $profileImg.src = profileImg;
+    $mbtiImg.src = mbti.mbtiImg;
+    $teamPlayImg.src = teamPlay.teamPlayImg;
+    $strengthImg.src = strength.strengthImg;
+    $hobbyImg.src = hobby.hobbyImg;
+    $title.textContent = mbti.title;
+    $comment.textContent = mbti.comment;
 }
+
+function changePersonalInfo(target) {
+    const { title, comment } = globalObj[target];
+    $title.textContent = title;
+    $comment.textContent = comment;
+}
+
+const $mbti = document.querySelector('.mbti');
+const $teamPlay = document.querySelector('.teamPlay');
+const $strength = document.querySelector('.strength');
+const $hobby = document.querySelector('.hobby');
+
+$mbti.addEventListener('click', () => changePersonalInfo('mbti'));
+$teamPlay.addEventListener('click', () => changePersonalInfo('teamPlay'));
+$strength.addEventListener('click', () => changePersonalInfo('strength'));
+$hobby.addEventListener('click', () => changePersonalInfo('hobby'));
