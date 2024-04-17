@@ -107,8 +107,19 @@ const globalObj = {};
 async function getMemberData(id) {
     const personalDoc = await getDoc(doc(db, 'members', id));
     // console.log(memberDocRef.data());
-    const { blog, color, git, hobby, mbti, name, profileImg, strength, teamPlay, word } =
-        personalDoc.data(); //
+    const {
+        blog,
+        color,
+        git,
+        hobby,
+        mbti,
+        name,
+        profileImg,
+        strength,
+        teamPlay,
+        word,
+        font,
+    } = personalDoc.data(); //
 
     globalObj.mbti = mbti;
     globalObj.hobby = hobby;
@@ -116,6 +127,7 @@ async function getMemberData(id) {
     globalObj.teamPlay = teamPlay;
 
     $middle.style.backgroundColor = `${color}`;
+    $middle.style.color = font;
     $name.textContent = name;
     $word.textContent = word;
     $blog.href = blog;
