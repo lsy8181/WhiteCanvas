@@ -46,15 +46,16 @@ async function getGuestBooks() {
     $('.submit').click(async function () {
         let inputName = $('.yourname').val();
         let inputContent = $('.yourcontent').val();
-        let boxName = $('.boxname').val();
-        let boxContent = $('.boxcontent').val();
-        let doc = {
-            name: inputName,
-            content: inputContent,
-        };
-        await addDoc(collection(db, 'review'), doc);
-        alert('등록되었습니다.');
-        window.location.reload();
+
+        if (inputName.trim() !== '' && inputContent.trim() !== '') {
+            let doc = {
+                name: inputName,
+                content: inputContent,
+            };
+            await addDoc(collection(db, 'review'), doc);
+            alert('등록되었습니다.');
+            window.location.reload();
+        }
     });
     let docs = await getDocs(collection(db, 'review'));
     docs.forEach((document) => {
