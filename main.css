@@ -1,0 +1,138 @@
+.title{
+    width: 100%;
+    height: 70px;
+    font-size: 50px;
+    font-weight: 700;
+    color: #643F24;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 90px 0 90px;
+}
+.container{
+    position: relative;
+    width: 800px;
+    height: 265px;
+    border: 2px solid #643F24;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #FAF9F6;
+    left: 0;
+    right: 0;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .name{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .name input{
+    width: 700px;
+    height: 40px;
+    border: 2px solid #E8DCCA;
+    border-radius: 10px;
+    background-color: #FAF9F6;
+    
+}
+.container .name input::placeholder{
+    color: #643F24;
+}
+
+.container .content{
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container .content input{
+    width: 700px;
+    height: 40px;
+    border: 2px solid #E8DCCA;
+    border-radius: 10px;
+    background-color: #FAF9F6;
+}
+
+.container .content input::placeholder{
+    color: #643F24;
+}
+
+.container button{
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+    background-color: #D1BB9E;
+    border: 1px solid #D1BB9E;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 5px 5px 0 0 #aaa;
+    color: #FAF9F6;
+    font-weight: 700;
+}
+
+.resultbox{
+    width: 800px;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    margin: 100px auto 0;
+}
+
+.resultbox .box{
+    position: relative;
+    width: 250px;
+    height: 350px;
+    border-radius: 20px;
+    box-shadow: 0 20px 20px 0 #aaa;
+    margin-bottom: 15px;
+    background-color: #D1BB9E;
+    margin-left: 15px;
+    color: #643F24;
+}
+
+/* .resultbox .box .boxtitle{
+    margin-top: 20px;
+    margin-left: 200px;
+    width: 30px;
+    height: 30px;
+} */
+
+.resultbox .box .delete{
+    margin-top: 20px;
+    margin-left: 200px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: #643F24;
+    cursor: pointer;
+}
+
+.resultbox .box .boxinner{
+    margin-top: 50px;
+    width: 250px;
+    height: 300px;
+}
+
+.resultbox .box .boxinner .boxname{
+    padding: 15px 30px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.resultbox .box .boxinner .boxcontent{
+    padding: 15px 30px;
+    font-size: 15px;
+}
+
