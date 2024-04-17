@@ -53,19 +53,22 @@
             let thiscontent = row['content'];
 
             let temp_html = `
-            <div class="box">
+            <div id=${document.id} class="box">
                 <button class="delete">x</button>
                 <div class="boxinner">
                     <div class="boxname">${thisname}</div>
                     <div class="boxcontent">${thiscontent}</div>
                 </div>
             </div>`
+
             $('.resultbox').append(temp_html);
 
-            $('.delete').click(async function(e) {
+            $(`#${document.id} .delete`).click(async function(e) {
                 if(confirm('삭제하시겠습니까?')){
                     e.target.parentElement.remove();
-                    await deleteDoc(doc(db,"review",document.id));
+                    if(e.target.parentElement.id === document.id){
+                        await deleteDoc(doc(db,"review",document.id));
+                    }
                 }else{};    
             })
         });
