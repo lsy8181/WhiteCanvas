@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>White Canvas</title>
+    <link rel="stylesheet" href="/css/main.css" />
+
+    <!-- 구글 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS 라이브러리 불러오기-->
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </head>
+
+  <body>
+    <hr />
+    <p>Regular</p>
+    <p>Bold</p>
+    nanum-gothic text test!<br />
+    whereas blah<br />
+
+    <button>button</button>
+    <div class="ourGoals">Our Goals</div>
+    <img src="assets/bigLogo_1.png" alt="bigLogo_1" />
+    <p>
+      AOS 라이브러리 적용하기기 전체 : 가운데 정렬, 배경 캔버스 이미지, 캔버스
+    </p>
+    마진 40px, 폰트 nanum gothic coding, 컬러 darkbrown
+    <!-- data-aos-* 속성을 태그에다가 써주면 알아서 동작되게 된다 -->
+    <div data-aos="zoom-out-right">
+      <!-- 오른쪽으로 줌아웃 하는 모션 설정 -->
+      <!-- 내용 ... -->
+    </div>
+
+    <!-- 다양한 속성들이 존재한다. (설명은 후술) -->
+    <div
+      data-aos="fade-up"
+      data-aos-offset="200"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="2000"
+    >
+      <!-- 내용 ... -->
+    </div>
+
+    <!-- AOS 스크립트 시작 -->
+    <script>
+      AOS.init(); // 자바스크립트로 init()을 해야 동작한다.
+    </script>
+
+    data-aos 사용할 애니메이션 효과명 <br />
+    data-aos-easing 애니메이션 시간흐름에 따른 속도설정 옵션(default: ease)<br />
+    data-aos-anchor 특정한 객체에 anchor를 설정하여,어떤 객체를 기준으로
+    애니메이션이 시작 될지를 설정 data-aos-delay 애니메이션 재생 대기시간
+    설정(default: 0) data-aos-offset 애니메이션 효과가 시작될 객체의 위치 설정
+    data-aos-duration 애니메이션의 재생시간 설정(default: 400)
+    data-aos-anchor-placement 애니메이션이 어느 위치에서부터 적용될지
+    설정(default: top-bottom) data-aos-once 스크롤 할때마다 애니매이션이
+    재생될지를 설정 (default: true) 이 값을 false로 하게되면, 스크롤을 위로
+    올렷다 다시 내릴때 애니메이션이 다시 재생되도록 할 수 있다.
+
+    <div
+      data-aos="fade-up"
+      data-aos-offset="200"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="false"
+      data-aos-anchor-placement="top-center"
+    ></div>
+  </body>
+</html>

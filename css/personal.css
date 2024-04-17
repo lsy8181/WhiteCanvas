@@ -1,0 +1,62 @@
+- 강연주 #ac2afa
+    
+    [프로젝트 소개 부분](https://www.notion.so/a707eff735a64e52b4b2523b6991a944?pvs=21)
+    
+- 방지영 #ffc0cb
+    
+    [프로젝트 소개 부분](https://www.notion.so/99b83a93615844ee868e4df1abb85141?pvs=21)
+    
+- 손지훈 #00FF7F
+    
+    [프로젝트 소개 부분](https://www.notion.so/a0b18cd471c842caaea29717c21e7b41?pvs=21)
+    
+    [팀 관련 내용](https://www.notion.so/debebee8a7cd40398a0f0368db6512df?pvs=21)
+    
+- 이보영 #3B58F3
+    
+    [프로젝트 소개 부분](https://www.notion.so/83f7e926d1e34780a2a305dcd4719a21?pvs=21)
+    
+- 이세영 #F3A41D
+    
+    [프로젝트 소개 부분 ](https://www.notion.so/e8d0e04126a345d184b932da48553c68?pvs=21)
+    
+- 이하얀 #e8273a
+    
+    [프로젝트 소개 부분](https://www.notion.so/d407885535db476a8ecbc3694fe1765e?pvs=21)
+
+.personal-profile {
+  width: 400px;
+  height: 400px;
+  border-radius: 5px;
+
+}
+
+.box {
+  width: 400px;
+  height: 400px;
+  background-color: red;
+  border-radius: 5px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.img-button {
+  background: url('/assets/smallLogo_1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+}
+
+
+.hide {
+  display: none;
+}
+
+.myDIV:hover + .hide {
+  display: block;
+  color: red;
+}

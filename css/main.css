@@ -1,0 +1,169 @@
+palette {
+  color: #FAF9F6;
+  color: #643F24;
+  color: #A79277;
+  color: #D1BB9E;
+  color: #EAD8C0;
+  color: #3B58F3;
+  color: #00FF7F;
+  color: #FFC0CB;
+  color: #E8273A;
+  color: #F3A41D;
+  color: #AC2AFA;
+}
+
+body {
+  font-family: "Nanum Gothic Coding", monospace;
+  background-color: #a0bfaa;
+  color: #643f24;
+  padding: 50px;
+  text-align: center;
+  background-image: url("/assets/backgroundImg.png");
+  background-size: cover;
+  cursor: url('https://github.com/JJQKR/cursor/blob/main/cursor-default.png?raw=true'), auto;
+  
+}
+
+hr {
+  width: 800px;
+  height: 10px;
+  background-color: #643f24;
+  border: 0;
+}
+
+- 강연주 #ac2afa
+    
+    [프로젝트 소개 부분](https://www.notion.so/a707eff735a64e52b4b2523b6991a944?pvs=21)
+    
+- 방지영 #ffc0cb
+    
+    [프로젝트 소개 부분](https://www.notion.so/99b83a93615844ee868e4df1abb85141?pvs=21)
+    
+- 손지훈 #00FF7F
+    
+    [프로젝트 소개 부분](https://www.notion.so/a0b18cd471c842caaea29717c21e7b41?pvs=21)
+    
+    [팀 관련 내용](https://www.notion.so/debebee8a7cd40398a0f0368db6512df?pvs=21)
+    
+- 이보영 #3B58F3
+    
+    [프로젝트 소개 부분](https://www.notion.so/83f7e926d1e34780a2a305dcd4719a21?pvs=21)
+    
+- 이세영 #F3A41D
+    
+    [프로젝트 소개 부분 ](https://www.notion.so/e8d0e04126a345d184b932da48553c68?pvs=21)
+    
+- 이하얀 #e8273a
+    
+    [프로젝트 소개 부분](https://www.notion.so/d407885535db476a8ecbc3694fe1765e?pvs=21)
+
+    
+
+/* 현재위치 : bold + shadow
+호버 할 때 : shadow */
+
+a {
+  color: #000;
+  font-weight: bold;
+  text-shadow: #000;
+}
+
+a:hover {
+  color: #000;
+  text-shadow: #000;
+  text-decoration: none;
+}
+
+
+/* header */
+logo size {
+  width: 200px;
+  height: 118px;
+}
+
+
+
+
+onclick {
+  bold + shadow
+  or hover
+}
+
+
+/* main */
+
+logo size {
+  width: 730px;
+  height: 160px;
+}
+
+partition size {
+  800px
+}
+
+/* our goals */
+
+.ourGoals {
+  color: #a79277;
+  font-size: 40px;
+  font-weight: bold;
+
+}
+
+.ourGroundRules {
+  color: #d1bb9e;
+}
+
+
+
+button {
+  background-color: violet;
+  color: aliceblue;
+  width: 100px;
+  height: 100px;
+  font-size: 50px;
+}
+
+button:hover {
+  cursor: url('https://github.com/JJQKR/cursor/blob/main/cursor-brown.png?raw=true'), auto;
+}
+
+/* button:hover {
+  cursor: url('https://github.com/JJQKR/cursor/blob/main/cursor-white.png?raw=true'), auto;
+} //white cursor 
+*/
+  
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+
+.guest-book-button {
+  width: 100px;
+  height: 40px;
+}
+
+.guest-book-write-box {
+  width: 800px;
+  height: 270px;
+}
+
+.guest-book-box input {
+  width: 700px;
+  height: 50px;
+}
+
+.guest-book-box-full {
+  width: 800px;
+  height: 350px;
+}
+
+.guest-book-box-each {
+  width: 250px;
+  height: 350px;
+  border-radius: 10px;
+}
