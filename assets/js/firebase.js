@@ -5,6 +5,7 @@ import {
     collection,
     addDoc,
     getDocs,
+    getDoc,
     doc,
     deleteDoc,
 } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js';
@@ -29,9 +30,22 @@ console.log(window.location.pathname);
 if (window.location.pathname === '/index.html') {
     getGuestBooks();
 } else if (window.location.pathname === '/personalPage_main.html') {
-    console.log('dd');
-    getMemberData();
+    getMemberData('LeeHayan');
 }
+
+// else if (window.location.pathname === '/personalPage_boyoung.html') {
+//     getMemberData('LeeBoyoung');
+// } else if (window.location.pathname === '/personalPage_hayan.html') {
+//     getMemberData('LeeHayan');
+// } else if (window.location.pathname === '/personalPage_jihun.html') {
+//     getMemberData('SonJihun');
+// } else if (window.location.pathname === '/personalPage_jiyoung.html') {
+//     getMemberData('BangJiYoung');
+// } else if (window.location.pathname === '/personalPage_seyoung.html') {
+//     getMemberData('LeeSeyoung');
+// } else if (window.location.pathname === '/personalPage_yunju.html') {
+//     getMemberData('KangYunju');
+//}
 
 async function getGuestBooks() {
     console.log('게스트북');
@@ -75,16 +89,18 @@ async function getGuestBooks() {
 }
 
 // 멤버 정보 가져오기
-async function getMemberData() {
-    console.log('멤버');
-    const memberDocRef = await getDocs(collection(db, 'members'));
-    memberDocRef.forEach((doc) => {
-        console.log(doc.data());
-    });
-}
 
-console.log('멤버');
-const memberDocRef = await getDocs(collection(db, 'members'));
-memberDocRef.forEach((doc) => {
-    console.log(doc.data());
-});
+const $name = document.querySelector('.profile_name > h1');
+const $word = document.querySelector('.profile_short > h1');
+const $blog = document.querySelector('.blog_image > a');
+const $git = document.querySelector('.github_image > a');
+console.log($blog);
+
+async function getMemberData(id) {
+    const personalDoc = await getDoc(doc(db, 'members', id));
+    // console.log(memberDocRef.data());
+    const { color, git, hobby, mbti, name, strength, teamPlay, word } =
+        personalDoc.data();
+    $name.textContent = name;
+    $word.textContent = word;
+}
