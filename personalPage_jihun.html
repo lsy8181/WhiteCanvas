@@ -1,156 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>White Canvas | 손지훈</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>White Canvas | 손지훈</title>
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon" />
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet" />
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <!-- Template Main CSS File -->
+    <link rel="stylesheet" href="./assets/css/style.css " />
+    <link href="assets/css/style_personal.css" rel="stylesheet" />
 
-  <!-- Template Main CSS File -->
-  <link rel="stylesheet" href="./assets/css/style.css " />
-  <link href="assets/css/style_personal.css" rel="stylesheet" />
+    <script type="module" src="./assets/js/firebase.js"></script>
+  </head>
 
-  <script type="module" src="./assets/js/firebase.js"></script>
+  <!-- body start -->
+  <header id="header" class="header fixed-top">
+    <div
+      class="container container-xl d-flex align-items-center justify-content-center"
+    >
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="../assets/img/logo main.png" alt="" />
+      </a>
+    </div>
 
-</head>
+    <!-- .navbar -->
+    <nav
+      id="navbar"
+      class="container container-xl align-items-center justify-content-center navbar"
+    >
+      <ul>
+        <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+        <li><a class="nav-link scrollto" href="#about">About</a></li>
+        <li><a class="nav-link scrollto" href="#services">Team</a></li>
+        <li><a class="nav-link scrollto" href="#Gbox">guest book</a></li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav>
+    <!-- End navbar -->
+  </header>
+  <!-- End Header -->
 
-<!-- body start -->
-<header id="header" class="header fixed-top">
-  <div class="container container-xl d-flex align-items-center justify-content-center">
-    <a href="index.html" class="logo d-flex align-items-center">
-      <img src="../assets/img/logo main.png" alt="" />
-    </a>
-  </div>
+  <body class="personal_page">
+    <div id="main">
+      <div class="top">
+        <div class="profile_photo">
+          <img src="" alt="" />
+        </div>
 
-  <!-- .navbar -->
-  <nav id="navbar" class="container container-xl align-items-center justify-content-center navbar">
-    <ul>
-      <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-      <li><a class="nav-link scrollto" href="#about">About</a></li>
-      <li><a class="nav-link scrollto" href="#services">Team</a></li>
-      <li><a class="nav-link scrollto" href="#Gbox">guest book</a></li>
-    </ul>
-    <i class="bi bi-list mobile-nav-toggle"></i>
-  </nav>
-  <!-- End navbar -->
-</header>
-<!-- End Header -->
-
-<body class="personal_page">
-  <div id="main">
-    <div class="top">
-      <div class="profile_photo">
-        <img src="" alt="">
+        <div class="profile_right">
+          <div class="profile_name">
+            <h1 style="font-size: 80px; font-weight: bold">Name</h1>
+          </div>
+          <div class="profile_short">
+            <h1 style="font-size: 30px">본인 한마디 적기</h1>
+          </div>
+          <div class="profle_address">
+            <div class="blog_image">
+              <a href="">
+                <img src="../assets/img/WeChat_image.png" alt="블로그" />
+              </a>
+            </div>
+            <div class="github_image">
+              <a href="">
+                <img src="../assets/img/Github_image.png" alt="깃허브" />
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="profile_right">
-        <div class="profile_name">
-          <h1 style="font-size: 80px; font-weight: bold">Name</h1>
-        </div>
-        <div class="profile_short">
-          <h1 style="font-size: 30px">본인 한마디 적기</h1>
-        </div>
-        <div class="profle_address">
-          <div class="blog_image">
-            <a href="">
-              <img src="../assets/img/WeChat_image.png" alt="블로그" />
-            </a>
+      <div class="middle">
+        <div class="middle_explain">
+          <div class="explain_body">
+            <h1
+              id="textToShow"
+              class="title"
+              style="font-size: 50px; font-weight: bold"
+            >
+              title
+            </h1>
+            <p class="comment">comment</p>
           </div>
-          <div class="github_image">
-            <a href="">
-              <img src="../assets/img/Github_image.png" alt="깃허브" />
-            </a>
+        </div>
+        <div class="middle_image">
+          <div class="image_wrap">
+            <div class="image_text mbti">MBTI</div>
+            <div class="mbtiImg">
+              <img src="/assets/img/logo main.png" alt="" />
+            </div>
+          </div>
+          <div class="image_wrap">
+            <div class="image_text teamPlay">협업 스타일</div>
+            <div class="teamPlayImg">
+              <img src="/assets/img/kangyunju-mbti.webp" alt="" />
+            </div>
+          </div>
+          <div class="image_wrap">
+            <div class="image_text strength">특기</div>
+            <div class="strengthImg">
+              <img src="/assets/img/kangyunju-teamplay.jpg" alt="" />
+            </div>
+          </div>
+          <div class="image_wrap">
+            <div class="image_text hobby">취미</div>
+            <div class="hobbyImg">
+              <img src="/assets/img/kangyunju-teamplay.jpg" alt="" />
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="middle">
-      <div class="middle_explain">
-        <div class="explain_body">
-          <h1 id="textToShow" class="title" style="font-size: 50px; font-weight: bold;">
-            title
-          </h1>
-          <p class="comment">comment</p>
-        </div>
-      </div>
-      <div class="middle_image">
-        <div class="image_wrap">
-          <div class="image_text mbti">MBTI</div>
-          <div class="mbtiImg">
-            <img src="/assets/img/logo main.png" alt="" />
-          </div>
-        </div>
-        <div class="image_wrap">
-          <div class="image_text teamPlay">협업 스타일</div>
-          <div class="teamPlayImg">
-            <img src="/assets/img/kangyunju-mbti.webp" alt="" />
-          </div>
-        </div>
-        <div class="image_wrap">
-          <div class="image_text strength">특기</div>
-          <div class="strengthImg">
-            <img src="/assets/img/kangyunju-teamplay.jpg" alt="" />
-          </div>
-        </div>
-        <div class="image_wrap">
-          <div class="image_text hobby">취미</div>
-          <div class="hobbyImg">
-            <img src="/assets/img/kangyunju-teamplay.jpg" alt="" />
+    <footer id="footer" class="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row d-flex">
+            <div class="copyright">
+              &copy; Copyright <strong><span>FlexStart</span></strong
+              >. All Rights Reserved. 스파르타 코딩클럽 내일배움캠프 React 5기
+            </div>
+
+            <div class="credits">
+              Created by Pasquale Ottaiano from Noun Project. Designed by
+              <a href="https://bootstrapmade.com/">BootstrapMade </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </footer>
 
-  <footer id="footer" class="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row d-flex">
-          <div class="copyright">
-            © Copyright <strong><span>FlexStart</span></strong>. All Rights Reserved
-          </div>
-          <div class="credits">스파르타 코딩클럽 내일배움캠프 React 5기</div>
-          <div class="credits">
-            Created by Pasquale Ottaiano from Noun Project
-          </div>
-          <div class="credits">
-            Designed by
-            <a href="https://bootstrapmade.com/">BootstrapMade </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-</body>
-
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
