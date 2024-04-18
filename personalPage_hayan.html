@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>personal_page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Nanum Gothic Coding", monospace;
+      }
+
+      .personal_page .top {
+        width: 1000px;
+        background-color: green;
+        display: flex;
+
+        justify-content: center;
+        align-items: flex-start;
+        margin: 200px auto 100px auto;
+      }
+
+      .personal_page .profile_photo {
+        width: 400px;
+        height: 400px;
+
+        background-color: red;
+        background-image: url();
+        background-size: cover;
+        border-radius: 5px;
+      }
+
+      .personal_page .photo_image {
+        width: 400px;
+        height: 400px;
+      }
+
+      .personal_page .profile_right {
+        width: 400px;
+        height: 400px;
+        background-color: darkblue;
+        text-align: center;
+      }
+
+      .personal_page .profile_name {
+        text-align: start;
+      }
+
+      .personal_page .profile_short {
+        text-align: start;
+      }
+
+      .personal_page .profle_address {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .personal_page .vlog_image {
+        width: 45px;
+        height: 45px;
+
+        border-radius: 5px;
+      }
+
+      .personal_page .github_image {
+        width: 45px;
+        height: 45px;
+
+        border-radius: 5px;
+      }
+
+      .personal_page .middle {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        background-color: skyblue;
+        width: 1000px;
+        border-radius: 5px;
+        overflow: hidden;
+        margin: 100px auto 100px auto;
+      }
+
+      .personal_page .middle_image {
+        width: 700px;
+        background-color: pink;
+      }
+
+      .personal_page .image_wrap {
+        width: 260px;
+        height: 260px;
+        margin: 20px 10px 10px 20px;
+        padding-top: 0px;
+        border-radius: 5px;
+        position: relative;
+
+        float: inline-start;
+      }
+
+      .personal_page .image_wrap img {
+        width: 260px;
+        height: 260px;
+        vertical-align: middle;
+        background-color: cadetblue;
+        border-radius: 5px;
+      }
+
+      .personal_page .image_text {
+        padding: 10px 10px;
+        border-radius: 10px;
+        font-weight: semi bold;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+      }
+
+      .personal_page .middle_explain {
+        margin-top: 35%;
+      }
+
+      .personal_page .explain_body {
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header id="header" class="header fixed-top">
+      <div
+        class="container container-xl d-flex align-items-center justify-content-center"
+      >
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="assets/img/logo main.png" alt="" />
+        </a>
+      </div>
+
+      <!-- .navbar -->
+      <nav
+        id="navbar"
+        class="container container-xl align-items-center justify-content-center navbar"
+      >
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Team</a></li>
+          <li><a class="nav-link scrollto" href="#Gbox">guest book</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+      <!-- End navbar -->
+    </header>
+    <div class="top">
+      <div class="profile_photo"></div>
+
+      <div class="profile_right">
+        <div class="profile_name">
+          <h1 style="font-size: 80px; font-weight: bold">Name</h1>
+        </div>
+        <div class="profile_short">
+          <h1 style="font-size: 30px">본인 한마디 적기</h1>
+        </div>
+        <div class="profle_address">
+          <div class="vlog_image">
+            <img src="assets/img/WeChat_image.png" alt="" />
+          </div>
+          <div class="github_image">
+            <img src="assets/img/Github_image.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="middle">
+      <div class="middle_explain">
+        <div class="explain_body">
+          <h1 style="font-size: 25px; font-weight: 1; text-align: center">
+            ipsum dolor sit amet consectetur adipisicing elit. Est non molestias
+            ab magnam quibusdam veritatis qui possimus, facere illum nesciunt
+            praesentium incidunt, placeat explicabo obcaecati quas nemo libero
+            omnis! Eligendi.
+          </h1>
+        </div>
+      </div>
+      <div class="middle_image">
+        <div class="image_wrap">
+          <div class="image_text">
+            <h2 style="font-size: 36px">MBTI</h2>
+          </div>
+          <div class="image_image"><img src="" alt="" /></div>
+        </div>
+        <div class="image_wrap">
+          <div class="image_text">
+            <h2 style="font-size: 36px">협업 스타일</h2>
+          </div>
+          <div class="image_image"><img src="" alt="" /></div>
+        </div>
+        <div class="image_wrap">
+          <div class="image_text">
+            <h2 style="font-size: 36px">특기</h2>
+          </div>
+          <div class="image_image"><img src="" alt="" /></div>
+        </div>
+        <div class="image_wrap">
+          <div class="image_text">
+            <h2 style="font-size: 36px">취미</h2>
+          </div>
+          <div class="image_image"><img src="" alt="" /></div>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer" class="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row d-flex">
+            <div class="copyright">
+              © Copyright <strong><span>FlexStart</span></strong
+              >. All Rights Reserved
+            </div>
+            <div class="credits">스파르타 코딩클럽 내일배움캠프 React 5기</div>
+            <div class="credits">
+              Created by Pasquale Ottaiano from Noun Project
+            </div>
+            <div class="credits">
+              Designed by
+              <a href="https://bootstrapmade.com/">BootstrapMade </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

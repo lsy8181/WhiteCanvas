@@ -1,0 +1,118 @@
+
+      * {
+        font-family: "Nanum Gothic Coding", monospace;
+      }
+
+      .personal_page .top {
+        width: 1000px;
+        background-color: green;
+        display: flex;
+
+        justify-content: center;
+        align-items: flex-start;
+        margin: 200px auto 100px auto;
+      }
+
+      .personal_page .profile_photo {
+        width: 400px;
+        height: 400px;
+
+        background-color: red;
+        background-image: url();
+        background-size: cover;
+        border-radius: 5px;
+      }
+
+      .personal_page .photo_image {
+        width: 400px;
+        height: 400px;
+      }
+
+      .personal_page .profile_right {
+        width: 400px;
+        height: 400px;
+        background-color: darkblue;
+        text-align: center;
+      }
+
+      .personal_page .profile_name {
+        text-align: start;
+      }
+
+      .personal_page .profile_short {
+        text-align: start;
+      }
+
+      .personal_page .profle_address {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .personal_page .vlog_image {
+        width: 45px;
+        height: 45px;
+
+        border-radius: 5px;
+      }
+
+      .personal_page .github_image {
+        width: 45px;
+        height: 45px;
+
+        border-radius: 5px;
+      }
+
+      .personal_page .middle {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        background-color: skyblue;
+        width: 1000px;
+        border-radius: 5px;
+        overflow: hidden;
+        margin: 100px auto 100px auto;
+      }
+
+      .personal_page .middle_image {
+        width: 700px;
+        background-color: pink;
+      }
+
+      .personal_page .image_wrap {
+        width: 260px;
+        height: 260px;
+        margin: 20px 10px 10px 20px;
+        padding-top: 0px;
+        border-radius: 5px;
+        position: relative;
+
+        float: inline-start;
+      }
+
+      .personal_page .image_wrap img {
+        width: 260px;
+        height: 260px;
+        vertical-align: middle;
+        background-color: cadetblue;
+        border-radius: 5px;
+      }
+
+      .personal_page .image_text {
+        padding: 10px 10px;
+        border-radius: 10px;
+        font-weight: semi bold;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+      }
+
+      .personal_page .middle_explain {
+        margin-top: 35%;
+      }
+
+      .personal_page .explain_body {
+        text-align: center;
+      }
+ 
