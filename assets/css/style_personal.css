@@ -14,6 +14,11 @@
     font-family: 'Nanum Gothic Coding', monospace;
 }
 
+#main {
+  background-image: url(/assets/img/main-bg.png);
+  margin: 275px 50px 50px 50px;
+}
+
 .personal_page .top {
     width: 1000px;
     background-color: green;
@@ -135,15 +140,7 @@
     font-family: 'Nanum Gothic Coding', monospace;
 }
 
-#main {
-    background-image: url(/assets/img/main-bg.png);
-    margin: 50px;
-}
 
-body {
-    font-family: 'Nanum Gothic Coding', monospace;
-    color: #643f24;
-}
 
 /* a {
   color: #643F24;

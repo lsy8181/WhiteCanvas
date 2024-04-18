@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>White Canvas</title>
+  <title>FlexStart Bootstrap Template - Index</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -32,7 +32,75 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <!-- Template firebase File -->
-  <script type="module" src="./assets/js/firebase.js"></script>
+  <script type="module">
+    // Firebase SDK 라이브러리 가져오기
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+    import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+    import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+    import { getDocs, doc, deleteDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+
+
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyDOjArna-lFSjmi3vChkLRiT4eyJ7dq5gw",
+      authDomain: "sparta-4305e.firebaseapp.com",
+      projectId: "sparta-4305e",
+      storageBucket: "sparta-4305e.appspot.com",
+      messagingSenderId: "187319515346",
+      appId: "1:187319515346:web:a0313e0f75ff30567a950b",
+      measurementId: "G-10L9XTK90Z"
+    };
+
+    // Firebase 인스턴스 초기화
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+
+    $(".submit").click(async function () {
+      let inputName = $('.yourname').val();
+      let inputContent = $('.yourcontent').val();
+      let boxName = $('.boxname').val();
+      let boxContent = $('.boxcontent').val();
+
+      let doc = {
+        'name': inputName,
+        'content': inputContent
+      };
+
+      await addDoc(collection(db, "review"), doc);
+      alert('등록되었습니다.');
+      window.location.reload();
+    });
+
+    let docs = await getDocs(collection(db, "review"));
+    docs.forEach((document) => {
+      let row = document.data();
+      let thisname = row['name'];
+      let thiscontent = row['content'];
+
+      let temp_html = `
+          <div id=${document.id} class="box">
+              <button class="delete">x</button>
+              <div class="boxinner">
+                  <div class="boxname">${thisname}</div>
+                  <div class="boxcontent">${thiscontent}</div>
+              </div>
+          </div>`
+
+      $('.resultbox').append(temp_html);
+
+      $(`#${document.id} .delete`).click(async function (e) {
+        if (confirm('삭제하시겠습니까?')) {
+          e.target.parentElement.remove();
+          if (e.target.parentElement.id === document.id) {
+            await deleteDoc(doc(db, "review", document.id));
+          }
+        } else { };
+      })
+    });
+
+
+  </script>
 
   <!-- =======================================================
   * Template Name: FlexStart
@@ -192,64 +260,87 @@
 
         <div class="row gy-4">
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-1 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <a href="./personalPage_main.html" class=".image-button">
+              <img src="assets/img/투명.png" class="img-fluid mx-auto d-block" alt="">
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-md-6" id="zoomIn" data-aos="fade-up" data-aos-delay="200">
             <a href="./personalPage_main.html" class=".image-button">
               <img src="assets/img/하얀님.png" class="img-fluid mx-auto d-block" alt="">
             </a>
           </div>
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-lg-3 col-md-6" id="zoomIn" data-aos="fade-up" data-aos-delay="300">
             <a href="./personalPage_main.html" class=".image-button">
               <img src="assets/img/연주님.png" class="img-fluid mx-auto d-block" alt="">
             </a>
           </div>
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="col-lg-3 col-md-6" id="zoomIn" data-aos="fade-up" data-aos-delay="400">
             <a href="./personalPage_main.html" class=".image-button">
               <img src="assets/img/seyoung.png" class="img-fluid mx-auto d-block" alt="">
             </a>
           </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+          <div class="col-lg-2 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <a href="./personalPage_main.html" class=".image-button">
+              <img src="assets/img/투명.png" class="img-fluid mx-auto d-block" alt="">
+            </a>
+          </div>
+          <div class="col-lg-2 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <a href="./personalPage_main.html" class=".image-button">
+              <img src="assets/img/투명.png" class="img-fluid mx-auto d-block" alt="">
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-6" id="zoomIn" data-aos="fade-up" data-aos-delay="500">
             <a href="./personalPage_main.html" class=".image-button">
               <img src="assets/img/지훈님.png" class="img-fluid mx-auto d-block" alt="">
             </a>
           </div>
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+          <div class="col-lg-3 col-md-6" id="zoomIn" data-aos="fade-up" data-aos-delay="600">
             <a href="./personalPage_main.html" class=".image-button">
               <img src="assets/img/지영님.png" class="img-fluid mx-auto d-block" alt="">
             </a>
           </div>
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
+          <div class="col-lg-3 col-md-6" id="zoomIn" data-aos="fade-up" data-aos-delay="700">
             <a href="./personalPage_main.html" class=".image-button">
               <img src="assets/img/보영님.png" class="img-fluid mx-auto d-block" alt="">
             </a>
           </div>
 
+          <div class="col-lg-2 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <a href="./personalPage_main.html" class=".image-button">
+              <img src="assets/img/투명.png" class="img-fluid mx-auto d-block" alt="">
+            </a>
+          </div>
         </div>
-        <div class="partition"></div>
-      </div>
 
+        </div>
+      </div>
+      
+     
 
     </section> <!-- End TEAM Section -->
-
+    <div class="partition"></div>
+    
 
     <!-- ======= GUEST BOOK Section ======= -->
     <section id="Gbox" class="Gbox">
       <div class="title">GUEST BOOK</div>
       <div class="container d-flex align-items-center">
-        <div class="name">
-          <input class='yourname' type="text" placeholder=" 이름">
-        </div>
-        <div class="content">
-          <input class="yourcontent" type="text" placeholder=" 남기고 싶은 말을 적어주세요.">
-        </div>
-        <button class="submit">기록하기</button>
+          <div class="name">
+              <input class='yourname' type="text" placeholder=" 이름">
+          </div>
+          <div class="content">
+              <input class="yourcontent" type="text" placeholder=" 남기고 싶은 말을 적어주세요.">
+          </div>
+          <button class="submit">기록하기</button>
       </div>
       <div class="resultbox text-start">
-        <!-- <div class="box">
+          <!-- <div class="box">
               <div class="boxtitle">
                   <button class="delete">x</button>
               </div>
