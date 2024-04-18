@@ -32,14 +32,24 @@ $('.submit').click(async function () {
     let boxName = $('.boxname').val();
     let boxContent = $('.boxcontent').val();
 
-    let doc = {
-        name: inputName,
-        content: inputContent,
-    };
+    if(inputName.trim() !== '' && inputContent.trim() !==''){
+                
+        let doc = {
+            'name': inputName,
+            'content': inputContent
+        };
 
-    await addDoc(collection(db, 'review'), doc);
-    alert('등록되었습니다.');
-    window.location.reload();
+        await addDoc(collection(db,"review"),doc);
+        alert('등록되었습니다.');
+        window.location.reload();
+
+    }else if(inputName.trim() === ''){
+        alert("이름을 입력해주세요.")
+        window.location.reload();
+    }else if(inputContent.trim() ===''){
+        alert("남기고 싶은 말을 적어주세요.")
+        window.location.reload();
+    }
 });
 
 let docs = await getDocs(collection(db, 'review'));
