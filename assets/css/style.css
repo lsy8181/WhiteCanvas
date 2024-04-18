@@ -29,9 +29,19 @@ body {
 }
 
 /* a {
+<<<<<<< HEAD
   text-decoration: none;
   color: #643F24;
   text-decoration: none;
+=======
+  color: #643F24;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #643F24;
+  text-decoration: none;
+>>>>>>> 24e5c80 (main 브랜치와 연결 + 충돌 해결)
 } */
 
 .partition {
