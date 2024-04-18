@@ -107,15 +107,31 @@
 
 .personal_page .image_wrap img {
     
+    opacity: 1;
     width: 260px;
     height: 260px;
     vertical-align: middle;
-    background-color: cadetblue;
+    
     border-radius: 5px;
 }
 
+.personal_page .image_wrap img:hover {
+  transition: 0.3s;
+  opacity: 0;
+  width: 260px;
+  height: 260px;
+  vertical-align: middle;
+  
+  border-radius: 5px;
+}
+
 .personal_page .image_text {
-  display: none;
+
+  opacity: 0;
+  width: 260px;
+  height: 260px;
+  background-color: #faf9f6;
+  
   padding: 10px 10px;
   border-radius: 10px;
   font-weight: semi bold;
@@ -129,7 +145,12 @@
 
 
 .personal_page .image_text:hover {
-  display: block;
+  transition: 0.3s;
+  opacity: 1;
+  width: 260px;
+  height: 260px;
+  background-color: #faf9f6;
+ 
   padding: 10px 10px;
   border-radius: 10px;
   font-weight: semi bold;
