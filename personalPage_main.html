@@ -39,6 +39,24 @@
     <link href="assets/css/style_personal.css" rel="stylesheet" />
 
     <script type="module" src="./assets/js/firebase.js"></script>
+
+    <script>
+      function onClickCard(cardName) {
+        const textH1 = document.querySelector("#textToShow");
+        if (cardName === "MBTI") {
+          textH1.innerHTML = "제 mbti는 ~~~~~~~입니다.";
+        }
+        if (cardName === "teamPlay") {
+          textH1.innerHTML = "협업스타일은 이렇습니다.";
+        }
+        if (cardName === "strength") {
+          textH1.innerHTML = "제특기는장점은~";
+        }
+        if (cardName === "hobby") {
+          textH1.innerHTML = "취미췸취뮈";
+        }
+      }
+    </script>
   </head>
 
   <!-- body start -->
@@ -98,34 +116,35 @@
       <div class="middle">
         <div class="middle_explain">
           <div class="explain_body">
-            <h1 style="font-size: 25px; font-weight: 1; text-align: center">
-              ipsum dolor sit amet consectetur adipisicing elit. Est non
-              molestias ab magnam quibusdam veritatis qui possimus, facere illum
-              nesciunt praesentium incidunt, placeat explicabo obcaecati quas
-              nemo libero omnis! Eligendi.
+            <h1
+              id="textToShow"
+              style="font-size: 25px; font-weight: 1; text-align: center"
+            >
+              mbti text mbti text mbti text mbti text mbti text mbti text mbti
+              text mbti text mbti text mbti text mbti text mbti text
             </h1>
           </div>
         </div>
         <div class="middle_image">
-          <div class="image_wrap">
+          <div class="image_wrap" onclick="onClickCard('MBTI')">
             <div class="image_text">MBTI</div>
             <div class="image_image">
               <img src="/assets/img/logo main.png" alt="" />
             </div>
           </div>
-          <div class="image_wrap">
+          <div class="image_wrap" onclick="onClickCard('teamPlay')">
             <div class="image_text">협업 스타일</div>
             <div class="image_image">
               <img src="/assets/img/kangyunju-mbti.webp" alt="" />
             </div>
           </div>
-          <div class="image_wrap">
+          <div class="image_wrap" onclick="onClickCard('strength')">
             <div class="image_text">특기</div>
             <div class="image_image">
               <img src="/assets/img/kangyunju-teamplay.jpg" alt="" />
             </div>
           </div>
-          <div class="image_wrap">
+          <div class="image_wrap" onclick="onClickCard('hobby')">
             <div class="image_text">취미</div>
             <div class="image_image">
               <img src="/assets/img/kangyunju-teamplay.jpg" alt="" />
