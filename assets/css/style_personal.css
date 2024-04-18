@@ -11,6 +11,7 @@
 --------------------------------------------------------------*/
 
 * {
+  cursor: url('/assets/img/cursor-default.png'), auto;
     font-family: 'Nanum Gothic Coding', monospace;
 }
 

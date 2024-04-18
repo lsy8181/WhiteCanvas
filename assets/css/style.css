@@ -10,11 +10,18 @@
 # General
 --------------------------------------------------------------*/
 
+
+button:hover {
+  cursor: url('https://github.com/JJQKR/cursor/blob/main/cursor-brown.png?raw=true'), auto;
+}
+
+
 :root {
     scroll-behavior: smooth;
 }
 
 * {
+  cursor: url('/assets/img/cursor-default.png'), auto;
     font-family: 'Nanum Gothic Coding', monospace;
 }
 
