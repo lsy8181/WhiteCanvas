@@ -79,6 +79,8 @@
     border-radius: 5px;
 }
 
+
+
 .personal_page .middle {
     display: grid;
     grid-template-columns: 40% 60%;
@@ -127,6 +129,7 @@
 
 .personal_page .image_text {
 
+  font-size: 36px;
   opacity: 0;
   width: 260px;
   height: 260px;
@@ -145,13 +148,16 @@
 
 
 .personal_page .image_text:hover {
+
+      
+
+  font-size: 36px;
   transition: 0.3s;
   opacity: 1;
   width: 260px;
   height: 260px;
   background-color: #faf9f6;
- 
-  padding: 10px 10px;
+  padding-top: 105px;
   border-radius: 10px;
   font-weight: semi bold;
   text-align: center;
