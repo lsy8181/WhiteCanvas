@@ -189,12 +189,12 @@ section {
 .header {
     transition: all 0.5s;
     z-index: 997;
-    padding: 20px 0;
+   
 }
 
 .header.header-scrolled {
     background: #fff;
-    padding: 15px 0;
+  
     box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
 }
 
@@ -233,14 +233,14 @@ section {
 .navbar a {
     background-color: #d1bb9e;
     width: 220px;
-    /* width 임의 */
+    height : 44px;
     margin-top: 50px;
     /* margin-bottom: 적용하기 */
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 15px 10px 30px;
+    justify-content: center;
+
     font-family: 'Nanum Gothic Coding', monospace;
     font-size: 16px;
     color: #000;
@@ -251,14 +251,15 @@ section {
 .navbar a:active {
     background-color: #d1bb9e;
     width: 220px;
+    height : 44px;
     /* width 임의 */
     margin-top: 50px;
     /* margin-bottom: 적용하기 */
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 15px 10px 30px;
+    justify-content: center;
+    
     font-family: 'Nanum Gothic Coding', monospace;
     font-size: 16px;
     font-weight: bold;
@@ -270,14 +271,15 @@ section {
 .navbar a:hover {
     background-color: #d1bb9e;
     width: 220px;
+    height : 44px;
     /* width 임의 */
     margin-top: 50px;
     /* margin-bottom: 적용하기 */
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 15px 10px 30px;
+    justify-content: center;
+   
     font-family: 'Nanum Gothic Coding', monospace;
     font-size: 16px;
     font-weight: 700px;
