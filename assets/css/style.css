@@ -45,10 +45,19 @@ a:hover {
   text-decoration: none;
 } */
 
+.partition-container {
+  display: flex;
+  justify-content: center;
+}
+
 .partition {
     height: 4px;
+    width: 770px;
+    text-align: center;
+    
     background-color: #643f24; /* 파티션 색상 */
     margin: 120px 0px; /* 상하 여백 */
+   
 }
 
 /*--------------------------------------------------------------
@@ -534,8 +543,11 @@ section {
     margin-top: 129px;
 }
 
+.hero img {
+  margin-top: 65px;
+}
 .hero h1 {
-    margin: 0;
+    margin-top: 35px;
     font-size: 48px;
     font-weight: 700;
     color: #643f24;
@@ -546,6 +558,7 @@ section {
     margin: 15px 0 0 0;
     font-size: 26px;
 }
+
 
 /*
 .hero .btn-get-started {
@@ -2352,6 +2365,7 @@ hero 버튼 영역*/
     margin: 0 0 90px;
 }
 .Gbox .container {
+  
     position: relative;
     width: 800px;
     height: 270px;
@@ -2406,6 +2420,7 @@ hero 버튼 영역*/
 }
 
 .Gbox .container button {
+  cursor: url('/assets/img/cursor-default.png'), auto !important; 
     width: 100px;
     height: 40px;
     margin-top: 10px;
@@ -2418,7 +2433,26 @@ hero 버튼 영역*/
     font-weight: 700;
 }
 
+.Gbox .container button:hover {
+  cursor: url('/assets/img/cursor-default.png'), auto !important; 
+  transition: 0.5s;
+    transform: scale(1.15);
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+    background-color: #d1bb9e;
+    border: 1px solid #d1bb9e;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 5px 5px 0 0 #aaa;
+    color: #faf9f6;
+    font-weight: 700;
+}
+
+
+
 .Gbox .resultbox {
+  cursor: url('/assets/img/cursor-default.png'), auto !important; 
     width: 800px;
     height: 450px;
     display: flex;
@@ -2428,6 +2462,7 @@ hero 버튼 영역*/
 }
 
 .Gbox .resultbox .box {
+  cursor: url('/assets/img/cursor-default.png'), auto !important; 
     position: relative;
     width: 250px;
     height: 350px;
@@ -2447,6 +2482,7 @@ hero 버튼 영역*/
 } */
 
 .Gbox .resultbox .box .delete {
+  cursor: url('/assets/img/cursor-default.png'), auto !important; 
     margin-top: 20px;
     margin-left: 200px;
     background-color: transparent;
@@ -2455,6 +2491,20 @@ hero 버튼 영역*/
     color: #643f24;
     cursor: pointer;
 }
+
+.Gbox .resultbox .box .delete:hover {
+  cursor: url('/assets/img/cursor-default.png'), auto !important; 
+  transition: 0.3s;
+    transform: scale(1.5);
+    margin-top: 20px;
+    margin-left: 200px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: #643f24;
+    cursor: pointer;
+}
+  
 
 .Gbox .resultbox .box .boxinner {
     margin-top: 50px;
@@ -2643,13 +2693,17 @@ hero 버튼 영역*/
 
 .footer .copyright {
     text-align: center;
-    padding-top: 30px;
+    padding-top: 66px;
     color: #643f24;
+    margin-bottom: 20px;
 }
 
 .footer .credits {
-    padding-top: 10px;
+    
+    padding-top: 40px;
     text-align: center;
     font-size: 13px;
     color: #643f24;
 }
+
+
