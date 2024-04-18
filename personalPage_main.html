@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>personal_page</title>
+    <title>White Canvas | 이름</title>
 
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon" />
@@ -35,215 +35,11 @@
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
     <!-- Template Main CSS File -->
+    <link rel="stylesheet" href="./assets/css/style.css " />
     <link href="assets/css/style_personal.css" rel="stylesheet" />
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <!-- Template firebase File -->
-    <script type="module">
-      // Firebase SDK 라이브러리 가져오기
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
-      import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
-      import {
-        collection,
-        addDoc,
-      } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
-      import {
-        getDocs,
-        doc,
-        deleteDoc,
-      } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
-
-      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-      const firebaseConfig = {
-        apiKey: "AIzaSyDOjArna-lFSjmi3vChkLRiT4eyJ7dq5gw",
-        authDomain: "sparta-4305e.firebaseapp.com",
-        projectId: "sparta-4305e",
-        storageBucket: "sparta-4305e.appspot.com",
-        messagingSenderId: "187319515346",
-        appId: "1:187319515346:web:a0313e0f75ff30567a950b",
-        measurementId: "G-10L9XTK90Z",
-      };
-
-      // Firebase 인스턴스 초기화
-      const app = initializeApp(firebaseConfig);
-      const db = getFirestore(app);
-
-      $(".submit").click(async function () {
-        let inputName = $(".yourname").val();
-        let inputContent = $(".yourcontent").val();
-        let boxName = $(".boxname").val();
-        let boxContent = $(".boxcontent").val();
-
-        let doc = {
-          name: inputName,
-          content: inputContent,
-        };
-
-        await addDoc(collection(db, "review"), doc);
-        alert("등록되었습니다.");
-        window.location.reload();
-      });
-
-      let docs = await getDocs(collection(db, "review"));
-      docs.forEach(document => {
-        let row = document.data();
-        let thisname = row["name"];
-        let thiscontent = row["content"];
-
-        let temp_html = `
-          <div id=${document.id} class="box">
-              <button class="delete">x</button>
-              <div class="boxinner">
-                  <div class="boxname">${thisname}</div>
-                  <div class="boxcontent">${thiscontent}</div>
-              </div>
-          </div>`;
-
-        $(".resultbox").append(temp_html);
-
-        $(`#${document.id} .delete`).click(async function (e) {
-          if (confirm("삭제하시겠습니까?")) {
-            e.target.parentElement.remove();
-            if (e.target.parentElement.id === document.id) {
-              await deleteDoc(doc(db, "review", document.id));
-            }
-          } else {
-          }
-        });
-      });
-    </script>
-
-    <!-- =======================================================
-  * Template Name: FlexStart
-  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
-  * Updated: Mar 17 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-
-    <style>
-      * {
-        font-family: "Nanum Gothic Coding", monospace;
-      }
-
-      .personal_page .top {
-        width: 1000px;
-        background-color: green;
-        display: flex;
-
-        justify-content: center;
-        align-items: flex-start;
-        margin: 200px auto 100px auto;
-      }
-
-      .personal_page .profile_photo {
-        width: 400px;
-        height: 400px;
-
-        background-color: red;
-        background-image: url();
-        background-size: cover;
-        border-radius: 5px;
-      }
-
-      .personal_page .photo_image {
-        width: 400px;
-        height: 400px;
-      }
-
-      .personal_page .profile_right {
-        width: 400px;
-        height: 400px;
-        background-color: darkblue;
-        text-align: center;
-      }
-
-      .personal_page .profile_name {
-        text-align: start;
-      }
-
-      .personal_page .profile_short {
-        text-align: start;
-      }
-
-      .personal_page .profle_address {
-        display: flex;
-        flex-direction: row;
-      }
-
-      .personal_page .vlog_image {
-        width: 45px;
-        height: 45px;
-
-        border-radius: 5px;
-      }
-
-      .personal_page .github_image {
-        width: 45px;
-        height: 45px;
-
-        border-radius: 5px;
-      }
-
-      .personal_page .middle {
-        display: grid;
-        grid-template-columns: 40% 60%;
-        background-color: skyblue;
-        width: 1000px;
-        border-radius: 5px;
-        overflow: hidden;
-        margin: 100px auto 100px auto;
-      }
-
-      .personal_page .middle_image {
-        width: 700px;
-        background-color: pink;
-      }
-
-      .personal_page .image_wrap {
-        width: 260px;
-        height: 260px;
-        margin: 20px 10px 10px 20px;
-        padding-top: 0px;
-        border-radius: 5px;
-        position: relative;
-
-        float: inline-start;
-      }
-
-      .personal_page .image_wrap img {
-        width: 260px;
-        height: 260px;
-        vertical-align: middle;
-        background-color: cadetblue;
-        border-radius: 5px;
-      }
-
-      .personal_page .image_text {
-        padding: 10px 10px;
-        border-radius: 10px;
-        font-weight: semi bold;
-        text-align: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        white-space: nowrap;
-      }
-
-      .personal_page .middle_explain {
-        margin-top: 35%;
-      }
-
-      .personal_page .explain_body {
-        text-align: center;
-      }
-    </style>
   </head>
 
   <!-- body start -->
-
   <header id="header" class="header fixed-top">
     <div
       class="container container-xl d-flex align-items-center justify-content-center"
@@ -351,6 +147,7 @@
         </div>
       </div>
     </footer>
+
     <!-- Vendor JS Files -->
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
