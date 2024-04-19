@@ -1,11 +1,13 @@
 // Firebase SDK 라이브러리 가져오기
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js';
+
 import {
     getFirestore,
     collection,
     addDoc,
     getDocs,
     getDoc,
+
     doc,
     deleteDoc,
 } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js';
@@ -24,6 +26,7 @@ const firebaseConfig = {
 // Firebase 인스턴스 초기화
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+
 
 if (window.location.pathname === '/index.html') {
     getGuestBooks();
@@ -156,3 +159,4 @@ $mbti.addEventListener('click', () => changePersonalInfo('mbti'));
 $teamPlay.addEventListener('click', () => changePersonalInfo('teamPlay'));
 $strength.addEventListener('click', () => changePersonalInfo('strength'));
 $hobby.addEventListener('click', () => changePersonalInfo('hobby'));
+

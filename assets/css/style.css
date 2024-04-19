@@ -10,6 +10,7 @@
 # General
 --------------------------------------------------------------*/
 
+
 @font-face {
     font-family: 'KCC-Hanbit';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/KCC-Hanbit.woff2') format('woff2');
@@ -51,6 +52,7 @@ body {
 a:hover {
   color: #643F24;
   text-decoration: none;
+
 } */
 
 .partition-container {
@@ -65,13 +67,13 @@ a:hover {
     
     background-color: #643f24; /* 파티션 색상 */
     margin: 120px 0px; /* 상하 여백 */
-   
 }
 
 /*--------------------------------------------------------------
 # Sections
 --------------------------------------------------------------*/
 section {
+
     padding: 0px 0;
     overflow: hidden;
     text-align: center;
@@ -105,12 +107,14 @@ section {
         font-size: 28px;
         line-height: 32px;
     }
+
 }
 
 /*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
 .breadcrumbs {
+
     padding: 15px 0;
     background: #012970;
     min-height: 40px;
@@ -156,12 +160,14 @@ section {
     padding-right: 10px;
     color: #8894f6;
     content: '/';
+
 }
 
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
 .back-to-top {
+
     position: fixed;
     visibility: hidden;
     opacity: 0;
@@ -189,21 +195,25 @@ section {
 .back-to-top.active {
     visibility: visible;
     opacity: 1;
+
 }
 
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
+
     [data-aos-delay] {
         transition-delay: 0 !important;
     }
+
 }
 
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
 .header {
+
     transition: all 0.5s;
     z-index: 997;
    
@@ -224,6 +234,7 @@ section {
     margin-right: 6px;
 }
 
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -231,6 +242,7 @@ section {
 * Desktop Navigation 
 */
 .navbar {
+
     margin-top: 25px;
     background-color: #d1bb9e;
 }
@@ -311,10 +323,12 @@ section {
   margin-top: 50px;
  
 
+
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 15px 10px 30px;
+
   font-family: "Nanum Gothic Coding", monospace;
   font-size: 16px;
   font-weight: 700;
@@ -330,10 +344,12 @@ section {
     margin-left: 30px;
     border-radius: 4px;
     color: #fff;
+
 }
 
 .navbar .getstarted:hover,
 .navbar .getstarted:focus:hover {
+
     color: #fff;
     background: #5969f3;
 }
@@ -367,6 +383,7 @@ section {
 
 .navbar .dropdown ul a i {
     font-size: 12px;
+
 }
 
 .navbar .dropdown ul a:hover,
@@ -399,11 +416,13 @@ section {
 .navbar .megamenu ul li a,
 .navbar .megamenu ul li:hover > a {
     color: #013289;
+
 }
 
 .navbar .megamenu ul li a:hover,
 .navbar .megamenu ul li .active,
 .navbar .megamenu ul li .active:hover {
+
     color: #4154f1;
 }
 
@@ -428,12 +447,14 @@ section {
     .navbar .dropdown .dropdown:hover > ul {
         left: -100%;
     }
+
 }
 
 /**
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
+
     color: #012970;
     font-size: 28px;
     cursor: pointer;
@@ -485,23 +506,28 @@ section {
     background-color: #fff;
     overflow-y: auto;
     transition: 0.3s;
+
 }
 
 .navbar-mobile a,
 .navbar-mobile a:focus {
+
     padding: 10px 20px;
     font-size: 15px;
     color: #012970;
+
 }
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover > a {
     color: #4154f1;
+
 }
 
 .navbar-mobile .getstarted,
 .navbar-mobile .getstarted:focus {
+
     margin: 15px;
 }
 
@@ -527,22 +553,26 @@ section {
 
 .navbar-mobile .dropdown ul a i {
     font-size: 12px;
+
 }
 
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
+
 .navbar-mobile .dropdown ul li:hover > a {
     color: #4154f1;
 }
 
 .navbar-mobile .dropdown > .dropdown-active {
     display: block;
+
 }
 
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
+
     width: 100%;
     height: 800px;
     margin-top: 129px;
@@ -563,7 +593,6 @@ section {
     margin: 15px 0 0 0;
     font-size: 26px;
 }
-
 
 /*
 .hero .btn-get-started {
@@ -596,6 +625,7 @@ section {
 hero 버튼 영역*/
 
 .hero .hero-img {
+
     text-align: center;
 }
 
@@ -637,6 +667,7 @@ hero 버튼 영역*/
     .hero .hero-img img {
         width: 100%;
     }
+
 }
 
 /*--------------------------------------------------------------
@@ -646,6 +677,7 @@ hero 버튼 영역*/
 # About
 --------------------------------------------------------------*/
 .about .content {
+
     padding: 0px;
 }
 
@@ -691,12 +723,14 @@ hero 버튼 영역*/
 
 .about .btn-read-more:hover i {
     transform: translateX(5px);
+
 }
 
 /*--------------------------------------------------------------
 # Values
 --------------------------------------------------------------*/
 .values .box {
+
     padding: 30px;
     box-shadow: 0px 0 5px rgba(1, 41, 112, 0.08);
     text-align: center;
@@ -723,12 +757,14 @@ hero 버튼 영역*/
 
 .values .box:hover img {
     transform: scale(1);
+
 }
 
 /*--------------------------------------------------------------
 # Counts
 --------------------------------------------------------------*/
 .counts {
+
     padding: 70px 0 60px;
 }
 
@@ -760,12 +796,14 @@ hero 버튼 영역*/
     margin: 0;
     font-family: 'KCC-Hanbit';
     font-size: 14px;
+
 }
 
 /*--------------------------------------------------------------
 # Features
 --------------------------------------------------------------*/
 .features .feature-box {
+
     padding: 24px 20px;
     box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
     transition: 0.3s;
@@ -885,12 +923,14 @@ hero 버튼 영역*/
 .features .feature-icons .content .icon-box p {
     font-size: 15px;
     color: #848484;
+
 }
 
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
 .services .service-box {
+
   
     box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
     height: 100%;
@@ -920,11 +960,6 @@ hero 버튼 영역*/
   transform: scale(1.08); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   
 }
-
-
-
-
-
 
 .services .image-button:hover {
     transform: scale(1.1);
@@ -1061,22 +1096,26 @@ hero 버튼 영역*/
 
 .services .service-box.pink:hover {
     background: #f51f9c;
+
 }
 
 .services .service-box:hover h3,
 .services .service-box:hover p,
 .services .service-box:hover .read-more {
+
     color: #fff;
 }
 
 .services .service-box:hover .icon {
     background: #fff;
+
 }
 
 /*--------------------------------------------------------------
 # Pricing
 --------------------------------------------------------------*/
 .pricing .box {
+
     padding: 40px 20px;
     background: #fff;
     text-align: center;
@@ -1170,12 +1209,14 @@ hero 버튼 영역*/
     padding: 1px 0 3px 0;
     background: #4154f1;
     color: #fff;
+
 }
 
 /*--------------------------------------------------------------
 # F.A.Q
 --------------------------------------------------------------*/
 .faq .accordion-collapse {
+
     border: 0;
 }
 
@@ -1201,12 +1242,14 @@ hero 버튼 영역*/
 .faq .accordion-body {
     padding: 0 0 25px 0;
     border: 0;
+
 }
 
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
 .portfolio #portfolio-flters {
+
     padding: 0;
     margin: 0 auto 25px auto;
     list-style: none;
@@ -1228,10 +1271,12 @@ hero 버튼 영역*/
     transition: 0.3s;
     border-radius: 50px;
     border: 1px solid #fff;
+
 }
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
+
     color: #4154f1;
     border-color: #4154f1;
 }
@@ -1375,12 +1420,14 @@ hero 버튼 영역*/
 .portfolio .portfolio-wrap:hover .portfolio-info::after {
     bottom: 15px;
     right: 15px;
+
 }
 
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
 .portfolio-details {
+
     padding-top: 40px;
 }
 
@@ -1446,12 +1493,14 @@ hero 버튼 영역*/
 
 .portfolio-details .portfolio-description p {
     padding: 0;
+
 }
 
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
 .testimonials .testimonial-item {
+
     box-sizing: content-box;
     padding: 30px;
     margin: 40px 30px;
@@ -1534,12 +1583,14 @@ hero 버튼 영역*/
         opacity: 1;
         transform: scale(1.12);
     }
+
 }
 
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
 .team {
+
     background: #fff;
     padding: 60px 0;
 }
@@ -1632,12 +1683,14 @@ hero 버튼 영역*/
 .team .member:hover .social {
     right: 8px;
     opacity: 1;
+
 }
 
 /*--------------------------------------------------------------
 # Clients
 --------------------------------------------------------------*/
 .clients .clients-slider .swiper-slide img {
+
     opacity: 0.5;
     transition: 0.3s;
 }
@@ -1661,12 +1714,14 @@ hero 버튼 영역*/
 
 .clients .clients-slider .swiper-pagination .swiper-pagination-bullet-active {
     background-color: #4154f1;
+
 }
 
 /*--------------------------------------------------------------
 # Recent Blog Posts
 --------------------------------------------------------------*/
 .recent-blog-posts .post-box {
+
     box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
     transition: 0.3s;
     height: 100%;
@@ -1725,12 +1780,14 @@ hero 버튼 영역*/
 
 .recent-blog-posts .post-box:hover .post-img img {
     transform: rotate(6deg) scale(1.2);
+
 }
 
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
 .contact .info-box {
+
     color: #444444;
     background: #fafbff;
     padding: 30px;
@@ -1800,18 +1857,22 @@ hero 버튼 영역*/
     border: 3px solid #18d26e;
     border-top-color: #eee;
     animation: animate-loading 1s linear infinite;
+
 }
 
 .contact .php-email-form input,
 .contact .php-email-form textarea {
+
     border-radius: 0;
     box-shadow: none;
     font-size: 14px;
     border-radius: 0;
+
 }
 
 .contact .php-email-form input:focus,
 .contact .php-email-form textarea:focus {
+
     border-color: #4154f1;
 }
 
@@ -1845,12 +1906,14 @@ hero 버튼 영역*/
     100% {
         transform: rotate(360deg);
     }
+
 }
 
 /*--------------------------------------------------------------
 # Blog
 --------------------------------------------------------------*/
 .blog {
+
     padding: 40px 0 20px 0;
 }
 
@@ -2194,15 +2257,19 @@ hero 버튼 영역*/
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .blog .blog-pagination li.active,
 .blog .blog-pagination li:hover {
+
     background: #4154f1;
+
 }
 
 .blog .blog-pagination li.active a,
 .blog .blog-pagination li:hover a {
+
     color: #fff;
 }
 
@@ -2353,22 +2420,28 @@ hero 버튼 영역*/
     padding-left: 5px;
     color: #a5c5fe;
     font-size: 14px;
+
 }
 
 /*--------------------------------------------------------------
 # guest book
 --------------------------------------------------------------*/
+
 .Gbox .title {
+
     width: 100%;
     height: 70px;
     font-size: 50px;
     font-weight: 700;
+
     color: #643f24;
+
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 0 90px;
 }
+
 .Gbox .container {
   
     position: relative;
@@ -2378,13 +2451,16 @@ hero 버튼 영역*/
     border-radius: 5px;
     box-sizing: border-box;
     background-color: #faf9f6;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+
 .Gbox .container .name {
+
     width: 100%;
     margin-top: 20px;
     padding: 10px 0;
@@ -2394,12 +2470,15 @@ hero 버튼 영역*/
 }
 
 
+
 .Gbox .container .name input {
+
     width: 700px;
     height: 40px;
     border: 2px solid #E8DCCA;
     border-radius: 10px;
     background-color: #FAF9F6;
+
     color: #643F24;
     padding-left: 10px;
 }
@@ -2418,11 +2497,13 @@ hero 버튼 영역*/
     align-items: center;
 }
 .Gbox .container .content input {
+
     width: 700px;
     height: 40px;
     border: 2px solid #E8DCCA;
     border-radius: 10px;
     background-color: #FAF9F6;
+
     color : #643F24;
     padding-left: 10px;
 }
@@ -2468,6 +2549,7 @@ hero 버튼 영역*/
 
 .Gbox .resultbox {
   cursor: url('/assets/img/cursor-default.png'), auto !important; 
+
     width: 800px;
     height: 450px;
     display: flex;
@@ -2476,17 +2558,21 @@ hero 버튼 영역*/
     margin: 100px auto 0;
 }
 
+
 .Gbox .resultbox .box {
   cursor: url('/assets/img/cursor-default.png'), auto !important; 
+
     position: relative;
     width: 250px;
     height: 350px;
     border-radius: 20px;
     box-shadow: 0 4px 4px 0 #aaa;
     margin-bottom: 15px;
+
     background-color: #d1bb9e;
     margin-left: 15px;
     color: #643f24;
+
 }
 
 /*.Gbox  .resultbox .box .boxtitle{
@@ -2495,6 +2581,7 @@ hero 버튼 영역*/
     width: 30px;
     height: 30px;
 } */
+
 
 .Gbox .resultbox .box .delete {
   cursor: url('/assets/img/cursor-default.png'), auto !important; 
@@ -2511,37 +2598,47 @@ hero 버튼 영역*/
   cursor: url('/assets/img/cursor-default.png'), auto !important; 
   transition: 0.3s;
     transform: scale(1.5);
+
     margin-top: 20px;
     margin-left: 200px;
     background-color: transparent;
     border: none;
     font-size: 20px;
+
     color: #643f24;
     cursor: pointer;
 }
   
 
 .Gbox .resultbox .box .boxinner {
+
     margin-top: 50px;
     width: 250px;
     height: 300px;
 }
 
+
 .Gbox .resultbox .box .boxinner .boxname {
+
     padding: 15px 30px;
     font-size: 22px;
     font-weight: 700;
 }
 
+
 .Gbox .resultbox .box .boxinner .boxcontent {
+
     padding: 15px 30px;
     font-size: 15px;
 }
+
+
 
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 .footer {
+
     background: #f6f9ff;
 
     font-size: 14px;
@@ -2720,5 +2817,6 @@ hero 버튼 영역*/
     font-size: 13px;
     color: #643f24;
 }
+
 
 
