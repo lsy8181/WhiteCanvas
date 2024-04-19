@@ -10,6 +10,13 @@
 # General
 --------------------------------------------------------------*/
 
+@font-face {
+    font-family: 'KCC-Hanbit';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/KCC-Hanbit.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 button:hover {
   cursor: url('https://github.com/JJQKR/cursor/blob/main/cursor-brown.png?raw=true'), auto;
@@ -22,7 +29,7 @@ button:hover {
 
 * {
   cursor: url('/assets/img/cursor-default.png'), auto;
-    font-family: 'Nanum Gothic Coding', monospace;
+    font-family: 'KCC-Hanbit';
 }
 
 #main {
@@ -31,7 +38,7 @@ button:hover {
 }
 
 body {
-    font-family: 'Nanum Gothic Coding', monospace;
+    font-family: 'KCC-Hanbit';
     color: #643f24;
 }
 
@@ -250,7 +257,7 @@ section {
     align-items: center;
     justify-content: center;
 
-    font-family: 'Nanum Gothic Coding', monospace;
+    font-family: 'Nanum'KCC-Hanbit;
     font-size: 16px;
     color: #000;
     white-space: nowrap;
@@ -269,7 +276,7 @@ section {
     align-items: center;
     justify-content: center;
     
-    font-family: 'Nanum Gothic Coding', monospace;
+    font-family: 'KCC-Hanbit';
     font-size: 16px;
     font-weight: bold;
     color: #000;
@@ -289,7 +296,7 @@ section {
     align-items: center;
     justify-content: center;
    
-    font-family: 'Nanum Gothic Coding', monospace;
+    font-family: 'KCC-Hanbit';
     font-size: 16px;
     font-weight: 700px;
     color: #000;
@@ -539,7 +546,7 @@ section {
 --------------------------------------------------------------*/
 .hero {
     width: 100%;
-    height: 654px;
+    height: 800px;
     margin-top: 129px;
 }
 
@@ -672,7 +679,7 @@ hero 버튼 영역*/
 }
 
 .about .btn-read-more span {
-    font-family: 'Nanum Gothic Coding', monospace;
+    font-family: 'KCC-Hanbit';
     font-weight: 600;
     font-size: 16px;
     letter-spacing: 1px;
@@ -753,7 +760,7 @@ hero 버튼 영역*/
 .counts .count-box p {
     padding: 0;
     margin: 0;
-    font-family: 'Nanum Gothic Coding', monospace;
+    font-family: 'KCC-Hanbit';
     font-size: 14px;
 }
 
@@ -1097,7 +1104,7 @@ hero 버튼 영역*/
     font-size: 36px;
     color: #444444;
     font-weight: 600;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'KCC-Hanbit';
 }
 
 .pricing .price sup {
@@ -1143,7 +1150,7 @@ hero 버튼 영역*/
     transition: none;
     font-size: 16px;
     font-weight: 400;
-    font-family: 'Nanum Gothic Coding', monospace;
+    font-family: 'KCC-Hanbit';
     font-weight: 600;
     transition: 0.3s;
     border: 1px solid #4154f1;
@@ -2388,35 +2395,45 @@ hero 버튼 영역*/
     align-items: center;
 }
 
+
 .Gbox .container .name input {
     width: 700px;
     height: 40px;
-    border: 2px solid #e8dcca;
+    border: 2px solid #E8DCCA;
     border-radius: 10px;
-    background-color: #faf9f6;
+    background-color: #FAF9F6;
+    color: #643F24;
+    padding-left: 10px;
 }
 .Gbox .container .name input::placeholder {
-    color: #643f24;
+    color: #643F24;
 }
-
+.Gbox .container .name input:focus {
+    border-color: #643F24;
+    outline: none;
+}
 .Gbox .container .content {
     width: 100%;
-    padding: 10px 0;
+    padding: 15px 0;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .Gbox .container .content input {
     width: 700px;
     height: 40px;
-    border: 2px solid #e8dcca;
+    border: 2px solid #E8DCCA;
     border-radius: 10px;
-    background-color: #faf9f6;
+    background-color: #FAF9F6;
+    color : #643F24;
+    padding-left: 10px;
 }
-
 .Gbox .container .content input::placeholder {
-    color: #643f24;
+    color: #643F24;
+}
+.Gbox .container .content input:focus {
+    border-color: #643F24;
+    outline: none;
 }
 
 .Gbox .container button {
@@ -2616,7 +2633,7 @@ hero 버튼 영역*/
     font-weight: 700;
     letter-spacing: 1px;
     color: #012970;
-    font-family: 'Nanum Gothic Coding', monospace;
+    font-family: 'KCC-Hanbit';
     margin-top: 3px;
 }
 
@@ -2624,7 +2641,7 @@ hero 버튼 영역*/
     font-size: 14px;
     line-height: 24px;
     margin-bottom: 0;
-    font-family: 'Nanum Gothic Coding', monospace;
+    font-family: 'KCC-Hanbit';
 }
 
 .footer .footer-top .social-links a {

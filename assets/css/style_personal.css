@@ -10,9 +10,17 @@
 # General
 --------------------------------------------------------------*/
 
+@font-face {
+    font-family: 'KCC-Hanbit';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/KCC-Hanbit.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 * {
     cursor: url('/assets/img/cursor-default.png'), auto;
-    font-family: 'Nanum Gothic Coding', monospace;
+    font-family: 'KCC-Hanbit';
 }
 
 #main {
@@ -33,7 +41,7 @@
     width: 400px;
     height: 400px;
 
-    background-color: red;
+    background-color: white;
     background-size: cover;
     border-radius: 5px;
     margin-left: 80px;
@@ -48,6 +56,7 @@
 .personal_page .photo_image {
     width: 400px;
     height: 400px;
+    object-fit: cover;
 }
 
 .personal_page .profile_right {
@@ -95,7 +104,6 @@
     height: 650px;
     justify-content: center;
     align-items: center;
-    background-color: skyblue;
     width: 100%;
     border-radius: 5px;
     overflow: hidden;
@@ -138,6 +146,7 @@
     height: 260px;
     vertical-align: middle;
     border-radius: 5px;
+    object-fit: cover;
 }
 
 .personal_page .image_wrap img:hover {
@@ -152,6 +161,7 @@
 .image_wrap:first-of-type,
 .image_wrap:nth-of-type(3) {
     padding-top: 15px;
+    margin-right: 15px;
 }
 
 .personal_page .image_text {
@@ -160,7 +170,7 @@
     width: 260px;
     height: 260px;
     background-color: #faf9f6;
-    color: black;
+    color: #643F24;
     padding: 10px 10px;
     border-radius: 5px;
     font-weight: semi bold;
@@ -205,7 +215,7 @@
 }
 
 * {
-    font-family: 'Nanum Gothic Coding', monospace;
+    font-family: 'KCC-Hanbit';
 }
 
 /* a {
@@ -414,7 +424,7 @@ section {
   align-items: center;
   justify-content: center;
 
-  font-family: 'Nanum Gothic Coding', monospace;
+  font-family: 'KCC-Hanbit';
   font-size: 16px;
   color: #000;
   white-space: nowrap;
@@ -433,7 +443,7 @@ section {
   align-items: center;
   justify-content: center;
   
-  font-family: 'Nanum Gothic Coding', monospace;
+  font-family: 'KCC-Hanbit';
   font-size: 16px;
   font-weight: bold;
   color: #000;
@@ -453,7 +463,7 @@ section {
   align-items: center;
   justify-content: center;
  
-  font-family: 'Nanum Gothic Coding', monospace;
+  font-family: 'KCC-Hanbit';
   font-size: 16px;
   font-weight: 700px;
   color: #000;
@@ -836,7 +846,7 @@ hero 버튼 영역*/
 }
 
 .about .btn-read-more span {
-    font-family: 'Nanum Gothic Coding', monospace;
+    font-family: 'KCC-Hanbit';
     font-weight: 600;
     font-size: 16px;
     letter-spacing: 1px;
@@ -917,7 +927,7 @@ hero 버튼 영역*/
 .counts .count-box p {
     padding: 0;
     margin: 0;
-    font-family: 'Nanum Gothic Coding', monospace;
+    font-family: 'KCC-Hanbit';
     font-size: 14px;
 }
 
@@ -1248,7 +1258,7 @@ hero 버튼 영역*/
     font-size: 36px;
     color: #444444;
     font-weight: 600;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'KCC-Hanbit';
 }
 
 .pricing .price sup {
@@ -1294,7 +1304,7 @@ hero 버튼 영역*/
     transition: none;
     font-size: 16px;
     font-weight: 400;
-    font-family: 'Nanum Gothic Coding', monospace;
+    font-family: 'KCC-Hanbit';
     font-weight: 600;
     transition: 0.3s;
     border: 1px solid #4154f1;
@@ -2730,7 +2740,7 @@ hero 버튼 영역*/
     font-weight: 700;
     letter-spacing: 1px;
     color: #012970;
-    font-family: 'Nanum Gothic Coding', monospace;
+    font-family: 'KCC-Hanbit';
     margin-top: 3px;
 }
 
@@ -2738,7 +2748,7 @@ hero 버튼 영역*/
     font-size: 14px;
     line-height: 24px;
     margin-bottom: 0;
-    font-family: 'Nanum Gothic Coding', monospace;
+    font-family: 'KCC-Hanbit';
 }
 
 .footer .footer-top .social-links a {
