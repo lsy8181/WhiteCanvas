@@ -28,19 +28,19 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 
-if (window.location.pathname === '/index.html') {
+if ((window.location.pathname).includes('/index.html') ) {
     getGuestBooks();
-} else if (window.location.pathname === '/personalPage_boyoung.html') {
+} else if ((window.location.pathname).includes('/personalPage_boyoung.html')) {
     getMemberData('LeeBoyoung');
-} else if (window.location.pathname === '/personalPage_hayan.html') {
+} else if ((window.location.pathname).includes('/personalPage_hayan.html')) {
     getMemberData('LeeHayan');
-} else if (window.location.pathname === '/personalPage_jihun.html') {
+} else if ((window.location.pathname).includes('/personalPage_jihun.html')) {
     getMemberData('SonJihun');
-} else if (window.location.pathname === '/personalPage_jiyoung.html') {
+} else if ((window.location.pathname).includes('/personalPage_jiyoung.html')) {
     getMemberData('BangJiYoung');
-} else if (window.location.pathname === '/personalPage_seyoung.html') {
+} else if ((window.location.pathname).includes('/personalPage_seyoung.html')) {
     getMemberData('LeeSeyoung');
-} else if (window.location.pathname === '/personalPage_yunju.html') {
+} else if ((window.location.pathname).includes('/personalPage_yunju.html')) {
     getMemberData('KangYunju');
 }
 
