@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>White Canvas | 이름</title>
+    <title>White Canvas | 이보영</title>
 
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon" />
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap"
       rel="stylesheet"
-    />
+    /> -->
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
@@ -40,24 +39,6 @@
     <link href="assets/css/style_personal.css" rel="stylesheet" />
 
     <script type="module" src="./assets/js/firebase.js"></script>
-
-    <script>
-      function onClickCard(cardName) {
-        const textH1 = document.querySelector("#textToShow");
-        if (cardName === "MBTI") {
-          textH1.innerHTML = "제 mbti는 ~~~~~~~입니다.";
-        }
-        if (cardName === "teamPlay") {
-          textH1.innerHTML = "협업스타일은 이렇습니다.";
-        }
-        if (cardName === "strength") {
-          textH1.innerHTML = "제특기는장점은~";
-        }
-        if (cardName === "hobby") {
-          textH1.innerHTML = "취미췸취뮈";
-        }
-      }
-    </script>
   </head>
 
   <!-- body start -->
@@ -76,10 +57,16 @@
       class="align-items-center justify-content-center navbar"
     >
       <ul>
-        <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-        <li><a class="nav-link scrollto" href="#about">About</a></li>
-        <li><a class="nav-link scrollto" href="#services">Team</a></li>
-        <li><a class="nav-link scrollto" href="#Gbox">guest book</a></li>
+        <li>
+          <a class="nav-link scrollto active" href="/index.html#hero">Home</a>
+        </li>
+        <li><a class="nav-link scrollto" href="/index.html#about">About</a></li>
+        <li>
+          <a class="nav-link scrollto" href="/index.html#services">Team</a>
+        </li>
+        <li>
+          <a class="nav-link scrollto" href="/index.html#Gbox">guest book</a>
+        </li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
     </nav>
@@ -90,7 +77,9 @@
   <body class="personal_page">
     <div id="main">
       <div class="top">
-        <div class="profile_photo"></div>
+        <div class="profile_photo">
+          <img src="" alt="" />
+        </div>
 
         <div class="profile_right">
           <div class="profile_name">
@@ -102,12 +91,12 @@
           <div class="profle_address">
             <div class="blog_image">
               <a href="">
-                <img src="../assets/img/WeChat_image.png" alt="블로그" />
+                <img src="assets/img/WeChat_image.png" alt="블로그" />
               </a>
             </div>
             <div class="github_image">
               <a href="">
-                <img src="../assets/img/Github_image.png" alt="깃허브" />
+                <img src="/assets/img/Github_image.png" alt="깃허브" />
               </a>
             </div>
           </div>
@@ -119,35 +108,36 @@
           <div class="explain_body">
             <h1
               id="textToShow"
-              style="font-size: 25px; font-weight: 1; text-align: center"
+              class="title"
+              style="font-size: 40px; font-weight: bold"
             >
-              mbti text mbti text mbti text mbti text mbti text mbti text mbti
-              text mbti text mbti text mbti text mbti text mbti text
+              title
             </h1>
+            <p class="comment">comment</p>
           </div>
         </div>
         <div class="middle_image">
-          <div class="image_wrap" onclick="onClickCard('MBTI')">
-            <div class="image_text">MBTI</div>
-            <div class="image_image">
+          <div class="image_wrap">
+            <div class="image_text mbti">MBTI</div>
+            <div class="mbtiImg">
               <img src="/assets/img/logo main.png" alt="" />
             </div>
           </div>
-          <div class="image_wrap" onclick="onClickCard('teamPlay')">
-            <div class="image_text">협업 스타일</div>
-            <div class="image_image">
+          <div class="image_wrap">
+            <div class="image_text teamPlay">협업 스타일</div>
+            <div class="teamPlayImg">
               <img src="/assets/img/kangyunju-mbti.webp" alt="" />
             </div>
           </div>
-          <div class="image_wrap" onclick="onClickCard('strength')">
-            <div class="image_text">특기</div>
-            <div class="image_image">
+          <div class="image_wrap">
+            <div class="image_text strength">특기</div>
+            <div class="strengthImg">
               <img src="/assets/img/kangyunju-teamplay.jpg" alt="" />
             </div>
           </div>
-          <div class="image_wrap" onclick="onClickCard('hobby')">
-            <div class="image_text">취미</div>
-            <div class="image_image">
+          <div class="image_wrap">
+            <div class="image_text hobby">취미</div>
+            <div class="hobbyImg">
               <img src="/assets/img/kangyunju-teamplay.jpg" alt="" />
             </div>
           </div>
@@ -186,4 +176,3 @@
     <script src="assets/js/main.js"></script>
   </body>
 </html>
-
