@@ -18,6 +18,7 @@
 #main {
     background-image: url(/assets/img/main-bg.png);
     margin: 275px 50px 50px 50px;
+    box-shadow: 4px 4px 4px rgba(1, 41, 112, 0.1);
 }
 
 .personal_page .top {
@@ -85,7 +86,6 @@
 .personal_page .github_image {
     width: 45px;
     height: 45px;
-
     border-radius: 5px;
     margin-left: 10px;
 }
@@ -96,12 +96,12 @@
     justify-content: center;
     align-items: center;
     background-color: skyblue;
-    width: 100%;
+    width: 95%;
     border-radius: 5px;
     overflow: hidden;
-    width: 100%;
     padding: 0 30px;
-    /* margin: 100px auto 100px auto; */
+    margin: 100px auto 0 auto; 
+
 }
 
 .middle_explain {
@@ -160,10 +160,10 @@
     width: 260px;
     height: 260px;
     background-color: #faf9f6;
-    color: black;
+    color: #633F24;
     padding: 10px 10px;
     border-radius: 5px;
-    font-weight: semi bold;
+    font-weight: bold;
     text-align: center;
     position: absolute;
     top: 50%;
@@ -362,12 +362,12 @@ section {
 .header {
     transition: all 0.5s;
     z-index: 997;
-    padding: 20px 0;
+    
 }
 
 .header.header-scrolled {
     background: #fff;
-    padding: 15px 0;
+
     box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
 }
 
@@ -386,81 +386,80 @@ section {
 /**
 * Desktop Navigation 
 */
+
 .navbar {
-  padding: 0;
+    margin-top: 50px;
+    background-color: #d1bb9e;
 }
 
 .navbar ul {
-  margin: auto;
-  padding: auto;
-  /* 마진 패딩 둘다 0이었음 */
-  display: flex;
-  list-style: none;
-  align-items: center;
+    margin: auto;
+    padding: auto;
+    /* 마진 패딩 둘다 0이었음 */
+    display: flex;
+    list-style: none;
+    align-items: center;
 }
 
 .navbar li {
-  position: relative;
+    position: relative;
 }
 
 .navbar a {
-  background-color: #d1bb9e;
-  width: 220px;
-  height : 44px;
-  margin-top: 50px;
-  /* margin-bottom: 적용하기 */
+    
+    width: 220px;
+    height : 44px;
+    
+    /* margin-bottom: 적용하기 */
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  font-family: 'Nanum Gothic Coding', monospace;
-  font-size: 16px;
-  color: #000;
-  white-space: nowrap;
-  transition: 0.3s;
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-size: 16px;
+    color: #000;
+    white-space: nowrap;
+    transition: 0.3s;
 }
 
 .navbar a:active {
-  background-color: #d1bb9e;
-  width: 220px;
-  height : 44px;
-  /* width 임의 */
-  margin-top: 50px;
-  /* margin-bottom: 적용하기 */
+    
+    width: 220px;
+    height : 44px;
+    /* width 임의 */
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  font-family: 'Nanum Gothic Coding', monospace;
-  font-size: 16px;
-  font-weight: bold;
-  color: #000;
-  white-space: nowrap;
-  transition: 0.3s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    white-space: nowrap;
+    transition: 0.3s;
 }
 
 .navbar a:hover {
-  background-color: #d1bb9e;
-  width: 220px;
-  height : 44px;
-  /* width 임의 */
-  margin-top: 50px;
-  /* margin-bottom: 적용하기 */
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
- 
-  font-family: 'Nanum Gothic Coding', monospace;
-  font-size: 16px;
-  font-weight: 700px;
-  color: #000;
-  text-shadow: 2px 2px 4px #615650;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: 0.3s;
+    width: 220px;
+    height : 44px;
+    /* width 임의 */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-size: 16px;
+    font-weight:  bold;
+    color: #000;
+    text-shadow: 2px 2px 4px #615650;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: 0.3s;
 }
 
 /* .navbar a:focus {
@@ -2699,7 +2698,7 @@ hero 버튼 영역*/
 .footer .footer-top {
     background: white url(../img/footer-img.png) no-repeat center top;
     background-size: contain;
-    border-top: 1px solid #e1ecff;
+    
     border-bottom: 1px solid #e1ecff;
     padding: 84px 0 30px 0;
     height: 355px;
